@@ -32,6 +32,19 @@ public class Concesionario extends Localizacion{
     public int totalCoches(Concesionario c){
         return c.coches.length-1;
     }
+    public Coche cocheMayorPotencia(Concesionario c){
+        int mayorPotencia=0;
+        Coche car=new Coche();
+
+        for(int i=0;i<c.coches.length;i++){
+            if (c.coches[i]!=null && c.coches[i].potencia>mayorPotencia){
+                mayorPotencia=c.coches[i].potencia;
+                car=c.coches[i];
+            }
+        }
+
+        return car;
+    }
     
 
 }
